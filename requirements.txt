@@ -12,6 +12,6 @@ matplotlib >= 1.4.3
 pandas >=0.19
 category_encoders
 seaborn
-collections
+collection
 xgboost
 imblearn
