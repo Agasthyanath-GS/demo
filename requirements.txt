@@ -10,3 +10,11 @@ scipy >= 0.15.1
 scikit-learn >= 0.18
 matplotlib >= 1.4.3
 pandas >=0.19
+pickle
+pylab
+category_encoders
+seaborn
+warnings
+collections
+xgboost
+imblearn
