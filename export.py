@@ -21,13 +21,13 @@ app = Flask(__name__)
 Swagger(app)
 
 #Creating a route with home page to check wheather the address and port of local host working correctly or not
-
+'''
 @app.route('/')
 def welcome():   
     return "WELCOME USER---type /apidocs for the swagger page where you can enter the data"
 
 # Creating a get request for collecting parametrs one by one for checking the "CHURN_FLAG" of a single 
-'''
+
 #creating Query set for running the swagger inide the flasgger
 @app.route('/predict',methods = ["Get"])
 def predict():    
