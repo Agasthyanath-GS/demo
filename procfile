@@ -1,2 +1,1 @@
-$ heroku ps:scale web=1
-web: gunicorn export:app
+gunicorn -b :5000 --access-logfile - --error-logfile - export:app
