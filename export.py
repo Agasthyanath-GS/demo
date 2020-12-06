@@ -22,16 +22,14 @@ Swagger(app)
 
 #Creating a route with home page to check wheather the address and port of local host working correctly or not
 
-@app.route('/')
-def welcome():
-   
-    return "WELCOME USER---type /apidocs for the swagger page where you can enter the data"
+#@app.route('/')
+#def welcome():   
+#    return "WELCOME USER---type /apidocs for the swagger page where you can enter the data"
 
 # Creating a get request for collecting parametrs one by one for checking the "CHURN_FLAG" of a single 
 
 #creating Query set for running the swagger inide the flasgger
 @app.route('/predict',methods = ["Get"])
-
 def predict():    
     """PREDICTS THE CHURN_FLAG of a customer
     NO_CHURN_Company 
@@ -121,7 +119,7 @@ def predict_file():
     data_scaled =StandardScaler().fit_transform(data) 
     prediction2 = model.predict(data_scaled)
     prediction3 = pd.DataFrame(prediction2.astype(int),columns=["CHURN_FLAG"])
-    pd.concat([data,prediction3],axis=1).to_csv("test_data_out",index=False)
+    #pd.concat([data,prediction3],axis=1).to_csv("test_data_out",index=False)
     return "predicteded 'CHURN_FLAG' for the input file is : " + str(prediction2.astype(int))
 
 #-> reading the data set,sciling the dataset,predicting the "CHURN_FLAG" ,printing the CHURN_FLAG in flasgger,saving the dataset with CHURN_FLAG as "test_data_out"
