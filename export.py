@@ -26,7 +26,7 @@ def welcome():
     return "WELCOME USER---type /apidocs for the swagger page where you can enter the data"
 
 # Creating a get request for collecting parametrs one by one for checking the "CHURN_FLAG" of a single 
-'''
+
 #creating Query set for running the swagger inide the flasgger
 @app.route('/predict',methods = ["Get"])
 def predict():    
@@ -122,6 +122,6 @@ def predict_file():
     return "predicteded 'CHURN_FLAG' for the input file is : " + str(prediction2.astype(int))
 
 #-> reading the data set,sciling the dataset,predicting the "CHURN_FLAG" ,printing the CHURN_FLAG in flasgger,saving the dataset with CHURN_FLAG as "test_data_out"
-'''
+
 if __name__ == "__main__":
     app.run()
