@@ -93,7 +93,7 @@ def predict():
         
     #checking with model and returning the output on screen   
     prediction1 = model.predict([parameters])
-    return "predicteded value is : " + str(prediction1)
+    return "predicteded value is : " + str(prediction1.astype(int))
 
 #here we are using post method for collecting the file adress
 @app.route('/predict_file',methods = ['POST'])
